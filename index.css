@@ -62,7 +62,7 @@ header .background {
   overflow: hidden;
   animation-iteration-count: infinite;
   animation-name: slider2;
-  animation-duration: 7s;
+  animation-duration: 10s;
 }
 @keyframes slider2 {
   0% {
@@ -92,7 +92,7 @@ header .background2 {
   overflow: hidden;
   animation-name: slider;
   animation-iteration-count: infinite;
-  animation-duration: 7s;
+  animation-duration: 10s;
 }
 @keyframes slider {
   0% {
@@ -105,6 +105,45 @@ header .background2 {
     opacity: 1;
   }
   50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+header .background3 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(70%);
+  z-index: -1;
+  overflow: hidden;
+  animation-name: slider3;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+@keyframes slider3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
     opacity: 1;
   }
   100% {
@@ -125,7 +164,7 @@ header .background2 {
   text-align: center;
 }
 .historia {
-  width: 80%;
+  width: 100%;
   font-family: "Courgette", cursive;
   height: auto;
   margin: 0;
@@ -153,6 +192,10 @@ header .background2 {
   text-align: center;
   margin: 20%;
 }
+.padres {
+  font-size: 14px;
+  width: 90%;
+}
 .dato {
   font-family: "sacramento", cursive;
   font-weight: 200;
@@ -165,8 +208,22 @@ header .background2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40%;
+  margin-bottom: 10%;
   object-fit: cover;
+}
+.padres-content {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+.padres-content img {
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 .novios img {
   width: 100%;
@@ -175,17 +232,47 @@ header .background2 {
 }
 .people {
   width: 90%;
+  height: 30%;
+  position: absolute;
+  border-radius: 10px;
+  margin-top: 320px;
+  background-color: rgb(199, 220, 249);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.462);
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.people2 {
+  width: 90%;
   height: 25%;
   position: absolute;
   border-radius: 10px;
-  margin-top: 420px;
+  margin-top: 320px;
+  background-color: rgb(199, 220, 249);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.462);
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.parent {
+  width: 70%;
+  height: 5%;
+  position: absolute;
+  border-radius: 10px;
+  border: 10px solid rgba(0, 5, 43, 0.617);
+  border-style: double;
+  margin-top: 120px;
   background-color: rgb(199, 220, 249);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.17);
-  padding-bottom: 20px;
   text-align: center;
 }
 .parents {
@@ -198,8 +285,8 @@ header .background2 {
   text-align: center;
 }
 .texto {
-  width: 80%;
-  font-size: 15px;
+  width: 85%;
+  font-size: 16px;
 }
 .and {
   font-family: "Playfair Display", Sans-serif;
@@ -294,6 +381,11 @@ header .background2 {
   width: 200px;
   height: 40px;
   object-fit: cover;
+}
+.boyfriends {
+  width: 85%;
+  font-size: 16px;
+  text-align: justify;
 }
 .maps {
   font-size: 18px;
