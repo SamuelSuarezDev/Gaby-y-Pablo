@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //===
   // VARIABLES
   //===
-  const DATE_TARGET = new Date("01/15/2023 4:01 AM");
+  const DATE_TARGET = new Date("01/15/2023 4:00 PM");
   // DOM for render
   const SPAN_DAYS = document.querySelector("span#days");
   const SPAN_HOURS = document.querySelector("span#hours");
@@ -50,8 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   // Refresh every second
   setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-});
-GreenAudioPlayer.init({
-  selector: ".player", // inits Green Audio Player on each audio container that has class "player"
-  stopOthersOnPlay: true,
 });
