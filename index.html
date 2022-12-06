@@ -108,11 +108,9 @@
         </p>
       </div>
     </section>
+    <h1 style="width: 70%; margin-top: 5%; font-size: 25px; margin: 30px;" class="names">Con la bendición de nuestros padres</h1>
     <section class="parents">
-      <h1 style="width: 80%; margin-top: 5%;" class="names">Con la bendición de nuestros padres</h1>
       <div class="parents-content">
-        <ul>
-          <li>
             <div class="padres-content-1">
               <h2 class="historia">Padres de la novia</h2>
               <img
@@ -123,10 +121,10 @@
               <div class="parent">
                 <h1 class="names padres">Lorenzo y Marcela González</h1>
               </div>
-              <span class="and">&</span>
             </div>
-          </li>
-          <li>
+            </div>
+            <span class="and">&</span>
+
             <div class="padres-content-2">
               <h2 class="historia">Padres del novio</h2>
               <img
@@ -139,17 +137,14 @@
               </div>
             </div>
             </div>
-          </li>
-        </ul>
             </div>
       </div>
     </section>
     <br />
     <br>
     <img class="line" src="./img/line-elegant.png" />
+    <h1 style="width: 80%; margin-top: 5%; font-size: 25px; margin: 30px;" class="names">Nuestros Momentos Juntos</h1>
     <div class="moments">
-
-      <h1 class="names">Nuestros momentos juntos ♥</h1>
       <div class="gallery">
         <div class="image">
           <img
@@ -277,9 +272,10 @@ Hacienda Alex Rodríguez        </h3>
   <script>
     AOS.init();
   </script>
-  <script>
+  <script> 
     let imageModal = document.getElementById("modal-img");
     let imageCarrusel = document.getElementById("image-carrusel");
+    let width = window.innerWidth;
     let id = 1;
     let idModal = 1;
     let urlModal;
@@ -288,6 +284,9 @@ Hacienda Alex Rodríguez        </h3>
     let modal = document.getElementById("modal");
     let zoom = document.getElementById("zoom");
     let zoomIn = "true";
+    if(width > 799){
+      alert("Página solo disponible para dispositivos móviles")
+    }
     function carruselMas(){
       id = id +1;
       console.log(id)

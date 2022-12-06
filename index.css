@@ -210,8 +210,8 @@ header .background3 {
 }
 .padres-content-1 {
   width: 100vw;
-  height: 100%;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -221,8 +221,8 @@ header .background3 {
 }
 .padres-content-2 {
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  height: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +248,7 @@ header .background3 {
 }
 .people {
   width: 85%;
-  height: 28%;
+  height: auto;
   position: absolute;
   border-radius: 10px;
   margin-top: 100%;
@@ -263,10 +263,10 @@ header .background3 {
 }
 .people2 {
   width: 85%;
-  height: 18%;
+  height: auto;
   position: absolute;
   border-radius: 10px;
-  margin-top: 320px;
+  margin-top: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -279,9 +279,7 @@ header .background3 {
 .parent {
   width: 86%;
   padding: 10px;
-  position: absolute;
   border-radius: 10px;
-  margin-top: 65%;
   background-color: white;
   box-shadow: 8px 8px 8px #001637;
   align-items: center;
@@ -289,10 +287,11 @@ header .background3 {
 }
 .parents {
   width: 100vw;
-  height: auto;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   text-align: center;
 }
 .texto {
@@ -302,15 +301,20 @@ header .background3 {
 .and {
   font-family: "Playfair Display", Sans-serif;
   font-size: 50px;
-  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 20vh;
 }
 .moments {
   width: 90%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
   overflow: hidden;
-  margin-bottom: 10%;
 }
 .moments .gallery {
   width: 100%;
@@ -508,23 +512,19 @@ header .background3 {
 }
 .section-parents {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 .parents-content {
   display: flex;
-  height: 105vh;
-  overflow: hidden;
-  flex-direction: column;
-}
-.parents-content ul {
-  justify-content: space-around;
-  width: 200%;
+  justify-content: center;
   overflow: hidden;
 }
-.parents-content li {
-  width: 100%;
-  list-style: none;
-  overflow: hidden;
+
+@media (min-width: 800px) {
+  body {
+    display: none;
+  }
 }
