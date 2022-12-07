@@ -19,15 +19,18 @@
       });
     </script>
   </head>
-  <div style="display: none">
-    <video
-      src="./PERFECT - Ed Sheeran [Saxophone Version].mp4"
-      width="100px"
-      height="100px"
-      autoplay
-    ></video>
-  </div>
   <body id="body">
+    <div style="display: none">
+      <iframe
+        src="./song.mp3"
+        frameborder="0"
+        allow="autoplay"
+        style="display: none"
+      ></iframe>
+      <audio autoplay loop id="playAudio">
+        <source src="/song.mp3" />
+      </audio>
+    </div>
     <header>
       <div class="background-content">
         <img class="background" src="./img/background.jpeg" />
@@ -374,9 +377,6 @@
     let modal = document.getElementById("modal");
     let zoom = document.getElementById("zoom");
     let zoomIn = "true";
-    let song = new Audio();
-    song.src = song.mp3;
-    song.play();
     if (width > 799) {
       alert("Página solo disponible para dispositivos móviles");
     }
