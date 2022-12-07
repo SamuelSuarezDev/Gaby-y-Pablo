@@ -46,22 +46,20 @@ h1{
   top: 65%;
 }
 .names {
-  font-family: "Playfair Display", Sans-serif;
   font-weight: 800;
   overflow: hidden;
   height: auto;
   text-transform: uppercase;
 }
 .title {
-  font-family: "Playfair Display", Sans-serif;
   font-size: 20px;
   margin: auto;
   text-transform: uppercase;
 }
 .invite {
   width: 80%;
-  font-family: "Courgette", cursive;
   font-size: 20px;
+  font-weight: 100;
   margin: auto;
 }
 header .background {
@@ -161,7 +159,6 @@ header .background3 {
   }
 }
 .our-history {
-  font-family: "Courguette ", cursive;
   font-weight: 200;
 }
 .history {
@@ -175,7 +172,6 @@ header .background3 {
 }
 .historia {
   width: 100%;
-  font-family: "Courgette", cursive;
   height: auto;
   margin: 0;
 }
@@ -188,7 +184,6 @@ header .background3 {
   border-width: 8px;
 }
 .date {
-  font-family: "Courgette", cursive;
   font-weight: 500;
   font-size: 17px;
   display: flex;
@@ -207,7 +202,6 @@ header .background3 {
   width: 100%;
 }
 .dato {
-  font-family: "sacramento", cursive;
   font-weight: 200;
   font-size: 40px;
 }
@@ -308,7 +302,6 @@ header .background3 {
   font-size: 16px;
 }
 .and {
-  font-family: "Playfair Display", Sans-serif;
   font-size: 50px;
   width: 100%;
   display: flex;
@@ -438,7 +431,6 @@ header .background3 {
   background-color: #0045ac;
   color: white;
   text-decoration: none;
-  font-family: "Playfair Display", Sans-serif;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 5%;
@@ -468,7 +460,6 @@ header .background3 {
   font-size: 14px;
   text-align: start;
   margin-top: 10%;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .lugar,
 .line {
@@ -499,7 +490,6 @@ header .background3 {
 }
 .versicle {
   font-size: 120%;
-  font-family: "Courgette", cursive;
   width: 90%;
 }
 .dress {
