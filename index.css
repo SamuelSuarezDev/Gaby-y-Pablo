@@ -22,6 +22,7 @@ body {
 
   width: 100vw;
   height: 100vh;
+  border-radius: 0 0 10px 10px;
 }
 
 .header-content {
@@ -47,7 +48,7 @@ body {
   text-transform: uppercase;
 }
 .title {
-  font-family: "Cormorant Garamond", Sans-serif;
+  font-family: "Playfair Display", Sans-serif;
   font-size: 20px;
   margin: auto;
   text-transform: uppercase;
@@ -155,7 +156,7 @@ header .background3 {
   }
 }
 .our-history {
-  font-family: "Aboreto", cursive;
+  font-family: "Courguette ", cursive;
   font-weight: 200;
 }
 .history {
@@ -308,7 +309,7 @@ header .background3 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 20vh;
+  height: 25vh;
 }
 .moments {
   width: 90%;
