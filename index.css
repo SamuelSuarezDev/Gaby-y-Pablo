@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
 }
 body {
   background-color: rgba(143, 198, 253, 0.582);
@@ -15,7 +14,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -230,7 +228,7 @@ header .background3 {
 }
 .people {
   width: 85%;
-  height: 220px;
+  height: 250px;
   position: absolute;
   border-radius: 10px;
   margin-top: 100%;
@@ -244,7 +242,7 @@ header .background3 {
 }
 .people2 {
   width: 85%;
-  height: 130px;
+  height: 150px;
   position: absolute;
   border-radius: 10px;
   margin-top: 100%;

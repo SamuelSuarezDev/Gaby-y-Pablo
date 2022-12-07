@@ -20,7 +20,7 @@
     </script>
   </head>
   <body id="body">
-    <div>
+    <div style="display: none">
       <audio loop id="audioelement">
         <source src="./song.mp3" type="audio/mp3" />
       </audio>
@@ -68,6 +68,24 @@
 
     <section class="history">
       <img style="width: 30%" src="./img/Logo.png" alt="" />
+      <div style="width: 80%; height: 8vh; display: flex; align-items: center">
+        <h3 style="margin-right: 15%">¡Dale play a nuestra canción!</h3>
+        <br />
+        <img
+          width="10%"
+          src="https://cdn-icons-png.flaticon.com/512/0/375.png"
+          alt=""
+          id="buttonPlay"
+          style="position: absolute; left: 75%"
+        />
+        <img
+          width="10%"
+          src="https://cdn-icons-png.flaticon.com/512/16/16427.png"
+          alt=""
+          id="buttonPause"
+          style="position: absolute; left: 75%; display: none"
+        />
+      </div>
       <h1 data-aos="zoom-out" class="subtitle">Nuestra historia</h1>
       <img class="line" src="./img/line-elegant.png" />
       <p data-aos="zoom-out" class="historia texto">
@@ -76,7 +94,6 @@
         Dios está vez será para toda la vida. Un día dijimos sí para ser novios
         y hoy diremos sí en el altar para toda la vida y nos llamaremos esposos.
       </p>
-      <br /><br />
       <img class="line" src="./img/line-elegant.png" />
     </section>
     <section class="novios">
@@ -363,9 +380,6 @@
     let imageModal = document.getElementById("modal-img");
     let imageCarrusel = document.getElementById("image-carrusel");
     let width = window.innerWidth;
-    window.onload = () => {
-      document.getElementById("autoplay").play();
-    };
     let id = 0;
     let idModal = 1;
     let urlModal;
@@ -374,11 +388,23 @@
     let modal = document.getElementById("modal");
     let zoom = document.getElementById("zoom");
     let zoomIn = "true";
+    let play = document.getElementById("buttonPlay");
+    let pause = document.getElementById("buttonPause");
     const playSound = function () {
       document.getElementById("audioelement").play();
       document.removeEventListener("click", playSound);
+      play.style.display = "none";
+      pause.style.display = "block";
     };
-    document.addEventListener("click", playSound);
+    const pauseSound = function () {
+      document.getElementById("audioelement").pause();
+      document.removeEventListener("click", pauseSound);
+      play.style.display = "block";
+      pause.style.display = "none";
+    };
+    play.addEventListener("click", playSound);
+    pause.addEventListener("click", pauseSound);
+
     if (width > 799) {
       alert("Página solo disponible para dispositivos móviles");
     }
