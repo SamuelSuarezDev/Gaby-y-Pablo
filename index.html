@@ -20,15 +20,9 @@
     </script>
   </head>
   <body id="body">
-    <div style="display: none">
-      <iframe
-        src="./song.mp3"
-        frameborder="0"
-        allow="autoplay"
-        style="display: none"
-      ></iframe>
-      <audio autoplay loop id="playAudio">
-        <source src="/song.mp3" />
+    <div>
+      <audio loop id="audioelement">
+        <source src="./song.mp3" type="audio/mp3" />
       </audio>
     </div>
     <header>
@@ -369,6 +363,9 @@
     let imageModal = document.getElementById("modal-img");
     let imageCarrusel = document.getElementById("image-carrusel");
     let width = window.innerWidth;
+    window.onload = () => {
+      document.getElementById("autoplay").play();
+    };
     let id = 0;
     let idModal = 1;
     let urlModal;
@@ -377,6 +374,11 @@
     let modal = document.getElementById("modal");
     let zoom = document.getElementById("zoom");
     let zoomIn = "true";
+    const playSound = function () {
+      document.getElementById("audioelement").play();
+      document.removeEventListener("click", playSound);
+    };
+    document.addEventListener("click", playSound);
     if (width > 799) {
       alert("Página solo disponible para dispositivos móviles");
     }
