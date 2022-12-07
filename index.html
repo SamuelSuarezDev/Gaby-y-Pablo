@@ -19,7 +19,7 @@
   </head>
   <body id="body">
     <div style="display: none;">
-      <audio autoplay controls loop preload="none" ><source src="./PERFECT - Ed Sheeran [Saxophone Version].mp3" type="audio/mp3"/></audio>
+      <audio autoplay controls loop ><source src="./song.mp3" type="audio/mp3"/></audio>
     </div>
     <header>
       <div class="background-content">
@@ -31,7 +31,7 @@
         />
       </div>
       <div class="header-content">
-        <img style="top: 55%; width: 30%;" src="./img/Logo.png" alt="">
+        <img style="width: 30%;" src="./img/Logo.png" alt="">
         <h1 class="title">Nuestra boda</h1>
         <h1 style="font-size: 50px" class="names">
           Gabriela <br /><span>&</span> <br />
@@ -40,7 +40,7 @@
         <p class="invite">
           Te invitamos a compartir la alegría de unir nuestras vidas
         </p>
-        <p class="invite fault">
+        <p class="invite">
           Para este día faltan:
         </p>
         <div class="contador">
@@ -286,6 +286,9 @@ Hacienda Alex Rodríguez        </h3>
     let modal = document.getElementById("modal");
     let zoom = document.getElementById("zoom");
     let zoomIn = "true";
+    let song = new Audio();
+    song.src = song.mp3;
+    song.play()
     if(width > 799){
       alert("Página solo disponible para dispositivos móviles")
     }
