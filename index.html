@@ -18,17 +18,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body id="body">
+    <div style="display: none;">
+      <audio autoplay controls loop preload="none" ><source src="./PERFECT - Ed Sheeran [Saxophone Version].mp3" type="audio/mp3"/></audio>
+    </div>
     <header>
       <div class="background-content">
         <img class="background" src="./img/background.jpeg" />
         <img class="background2" src="./img/background2.jpeg" />
-        <audio style="display: none;" autoplay="" controls loop preload="none" ><source src="./PERFECT - Ed Sheeran [Saxophone Version].mp3" type="audio/mp3"/></audio>
         <img
         class="background3"
-          src="https://i.postimg.cc/fbJsQQvj/Whats-App-Image-2022-12-02-at-10-58-12-AM.jpg"
+        src="https://i.postimg.cc/fbJsQQvj/Whats-App-Image-2022-12-02-at-10-58-12-AM.jpg"
         />
       </div>
       <div class="header-content">
+        <img style="top: 55%; width: 30%;" src="./img/Logo.png" alt="">
         <h1 class="title">Nuestra boda</h1>
         <h1 style="font-size: 50px" class="names">
           Gabriela <br /><span>&</span> <br />
@@ -165,8 +168,8 @@
     </div>
     <div id="modal" class="modal">
       <div class="modal-content">
-        <img onclick="carruselModalMas()" style="z-index: 10000;margin-top: 50%;left: 50%;position:absolute;width: 250px; top: 5%;" src="./img/Diseño sin título (9).png" alt="">
-        <img onclick="carruselModalMenos()" style="z-index: 10000;margin-top: 50%;right: 50%;position:absolute;transform: scaleX(-1);width: 250px; top: 5%;" src="./img/Diseño sin título (9).png" alt="">
+        <img onclick="carruselModalMas()" style="z-index: 10000;margin-top: 50%;left: 60%;position:absolute;width: 250px; top: 5%;" src="./img/Diseño sin título (9).png" alt="">
+        <img onclick="carruselModalMenos()" style="z-index: 10000;margin-top: 50%;right: 60%;position:absolute;transform: scaleX(-1);width: 250px; top: 5%;" src="./img/Diseño sin título (9).png" alt="">
         <div class="menu">
           <img
             onclick="hideModal()"
@@ -265,7 +268,6 @@ Hacienda Alex Rodríguez        </h3>
         <img width="70%" style="border-radius: 50%; border: 5px solid #0045ac; padding: 10px;" src="https://cdn-icons-png.flaticon.com/512/2806/2806149.png" alt="">
       </div>
       <p class="historia">Se reserva la gama de azul y blanco </p>
-      <img style="margin-top: 10%; width: 30%;" src="./img/Logo.png" alt="">
       <p style="margin-top: 5%; font-size: 10px" class="historia">Realizado por <a style="text-decoration: none;color: #0045ac;" href="https://github.com/SamuelSuarezDev" target="_blank">SamuelSuarezDev</a></p>
     </div>
   </body>
@@ -276,7 +278,7 @@ Hacienda Alex Rodríguez        </h3>
     let imageModal = document.getElementById("modal-img");
     let imageCarrusel = document.getElementById("image-carrusel");
     let width = window.innerWidth;
-    let id = 1;
+    let id = 0;
     let idModal = 1;
     let urlModal;
     let url;
@@ -311,16 +313,16 @@ Hacienda Alex Rodríguez        </h3>
       if(id == 7){
         url = "https://i.postimg.cc/6Qz6VhpT/image00072.jpg";
       }
-      if(id > 7){
+      if(id > 6){
         id=1;
       }
-      if(id > 1){
+        if(id > 0){
       imageCarrusel.style.opacity=0;
       }
       console.log(url)
-      imageModal.src = url;
+      imageCarrusel.src = url;
         setTimeout(()=>{
-          imageModal.style.opacity=1;
+          imageCarrusel.style.opacity=1;
         },200)
     }
     function carruselModalMas(){
@@ -356,7 +358,7 @@ Hacienda Alex Rodríguez        </h3>
     }
      function Carrusel(){
        imageCarrusel.style.opacity=0;
-      if(id<8){
+      if(id<6){
          id = id +1;
       }
       console.log(id)
@@ -389,10 +391,16 @@ Hacienda Alex Rodríguez        </h3>
           imageCarrusel.style.opacity=1;
             },200)}
       setInterval(()=>{
-        Carrusel()
+       setTimeout(()=>{
+        console.log(id)
+      },5000)
+      Carrusel()
       },5000)
       console.log(url)
      function carruselMenos(){
+      if(id==1){
+        id = 8;
+      }
        console.log(id)
        if(id >0){
        id = id -1;
@@ -428,6 +436,9 @@ Hacienda Alex Rodríguez        </h3>
         },200)
       }
       function carruselModalMenos(){
+        if(idModal==1){
+        idModal = 8;
+        }
         console.log(idModal)
         if(idModal >1){
          idModal = idModal -1;
