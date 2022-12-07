@@ -17,6 +17,11 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
+h1{
+  font-size: 18px;
+  padding: 10px 0;
+}
 .background-content {
   position: absolute;
 
@@ -255,7 +260,7 @@ header .background3 {
 }
 .people {
   width: 85%;
-  height: auto;
+  height: 220px;
   position: absolute;
   border-radius: 10px;
   margin-top: 100%;
